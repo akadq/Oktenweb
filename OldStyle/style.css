@@ -1,0 +1,10 @@
+* {
+    background: aliceblue;
+    margin: 0;
+}
+
+.first {
+    height: 200px;
+    width: 400px;
+    background: silver;
+}
