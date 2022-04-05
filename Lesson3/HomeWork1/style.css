@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    font-weight: 100;
+}
+
+.widgets, .contact {
+    display: flex;
+    flex-direction: row;
+    /*background-color: #3474e6;*/
+    background-color: rgb(53, 106, 181);
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+}
+
+.contact {
+    margin-top: 20px;
+    height: 580px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    margin-top: 20px;
+    /*align-items: center;*/
+    /*flex-wrap: wrap;*/
+    /*color: white;*/
+}
+
+.boxes {
+    display: flex;
+    height: 100%;
+    width: 31.5%;
+    background-color: rgb(22, 69, 122);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+}
