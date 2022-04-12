@@ -59,7 +59,7 @@ body {
     line-height: 400px;
 }
 
-@media screen and (min-width: 0) and (max-width: 600px) {
+@media screen and (min-width: 0) and (max-width: 300px) {
     body {
         line-height: 60px;
     }
@@ -68,47 +68,43 @@ body {
         height: 50px;
         line-height: 50px;
     }
-}
 
-.middle {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-between;
-    /*align-items: stretch;*/
-    /*flex-wrap: wrap;*/
-    row-gap: 5px;
-}
+    .middle {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+        /*flex-wrap: wrap;*/
+        /*row-gap: 5px;*/
+    }
 
-.wrap {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: stretch;
-    /*flex-wrap: wrap;*/
-    row-gap: 5px;
-    /*column-gap: 5px;*/
-}
+    .wrap {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+        /*flex-direction: row;*/
+        /*row-gap: 5px;*/
+    }
 
-.b {
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    border: black solid 1px;
-}
+    .b {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        border: black solid 1px;
+    }
 
-.c, .d, .e {
-    width: 33%;
-    height: 60px;
-    width: 60px;
-    border: black solid 1px;
-    margin: 20px;
-}
+    .c, .d, .e {
+        width: 33%;
+        height: 60px;
+        border: black solid 1px;
+    }
 
-.f {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-}
+    .f {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
 
 }
