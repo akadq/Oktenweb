@@ -36,7 +36,6 @@ body {
     align-items: stretch;
     flex-wrap: wrap;
     row-gap: 5px;
-    /*column-gap: 5px;*/
 }
 
 .b {
@@ -75,8 +74,6 @@ body {
         width: 100%;
         justify-content: space-between;
         align-items: stretch;
-        /*flex-wrap: wrap;*/
-        /*row-gap: 5px;*/
     }
 
     .wrap {
@@ -84,8 +81,6 @@ body {
         width: 100%;
         justify-content: space-between;
         align-items: stretch;
-        /*flex-direction: row;*/
-        /*row-gap: 5px;*/
     }
 
     .b {
