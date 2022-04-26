@@ -11,7 +11,7 @@
             display: flex;
             justify-content: start;
             flex-direction: column;
-            background: #222;
+            background: #777;
             color: white;
             font-size: 1.5em;
             box-sizing: border-box;
@@ -27,66 +27,82 @@
             color: red;
         }
 
+        .radio-toolbar input[type="radio"] {
+            display: none;
+        }
+
+        .radio-toolbar label {
+            display: inline-block;
+            background-color: #ddd;
+            padding: 4px 11px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #2a2a2a;
+        }
+
+        .radio-toolbar input[type="radio"]:checked + label {
+            background-color: #bbb;
+        }
     </style>
     <title>Document</title>
 </head>
 <body>
 <h4>Please select JS homework:</h4>
 <form>
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW1"
                name="work" onclick="handleClick(this);" value="HW1" checked>
         <label for="HW1">HomeWork 1</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW2"
                name="work" onclick="handleClick(this);" value="HW2">
         <label for="HW2">HomeWork 2</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW3"
                name="work" onclick="handleClick(this);" value="HW3">
         <label for="HW3">HomeWork 3</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW4"
                name="work" onclick="handleClick(this);" value="HW4">
         <label for="HW4">HomeWork 4</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW5"
                name="work" onclick="handleClick(this);" value="HW5">
         <label for="HW5">HomeWork 5</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW6"
                name="work" onclick="handleClick(this);" value="HW6">
         <label for="HW6">HomeWork 6</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW7"
                name="work" onclick="handleClick(this);" value="HW7">
         <label for="HW7">HomeWork 7</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW8"
                name="work" onclick="handleClick(this);" value="HW8">
         <label for="HW8">HomeWork 8</label>
     </div>
 
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW9"
                name="work" onclick="handleClick(this);" value="HW9">
         <label for="HW9">HomeWork 9</label>
     </div>
-    <div>
+    <div class="radio-toolbar">
         <input type="radio" id="HW10"
                name="work" onclick="handleClick(this);" value="HW10">
         <label for="HW10">HomeWork 10</label>

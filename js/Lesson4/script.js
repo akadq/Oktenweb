@@ -105,7 +105,7 @@ function threeLi(lises) {
     for (let i = 0; i < 3; i++) {
         document.write(`<li>${lises}</li>`);
     }
-    document.write('/<ul>');
+    document.write('</ul>');
 }
 
 function threeLiControl(lises, quant) {
@@ -114,7 +114,7 @@ function threeLiControl(lises, quant) {
     for (let i = 0; i < quant; i++) {
         document.write(`<li>${lises}</li>`);
     }
-    document.write('/<ul>');
+    document.write('</ul>');
 }
 
 function arraayList(arrayElements) {
