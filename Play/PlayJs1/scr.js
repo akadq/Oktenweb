@@ -1,1 +1,3 @@
-document.write("<h1>Hi there</h1>");
+let i = 1;
+// debugger;
+console.log(i++ + ++i + i);

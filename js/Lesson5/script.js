@@ -19,6 +19,19 @@ const objectsToSend = [
 
 ];
 
+twoObj = [
+    {
+        id: "Green",
+        name: "Nick",
+        age: "20"
+    },
+    {
+        id: "Grey",
+        name: "Serg",
+        age: "34"
+    }
+];
+
 let a = 5;
 let b = 15;
 let c = 13;
@@ -105,6 +118,11 @@ function handleClick(myRadio) {
         case "HW55": {
             result = reverseArr(arrayReverse, arrayOfNumbers);
             document.getElementById("task").innerHTML = (`Функція приймає масив та робить з нього новий масив в зворотньому порядку: ${result}`);
+            break;
+        }
+        case "HW65": {
+            result = reversed(twoObjReverseFunc, twoObj);
+            document.getElementById("task").innerHTML = (`створити функцію, яка приймає масив з 2х об'єктів, та міняє їх місцями: ${result[0].id}, ${result[0].name}, ${result[0].age}; ${result[1].id}, ${result[1].name}, ${result[1].age}`);
             break;
         }
 
@@ -227,7 +245,16 @@ function arrayReverse(arrayToRev) {
     return reversedArray;
 }
 
+function twoObjReverseFunc(twoObjP) {
+    // debugger;
+    let objReverse = [{}];
+    objReverse[0] = twoObjP[1];
+    objReverse[1] = twoObjP[0];
+    return objReverse;
+}
+
 let calc = (callback, array) => callback(array);
 let minMax = (callback, ...numbers) => callback(...numbers);
 let randomArrow = (callback, ...limit) => callback(limit);
 let reverseArr = (callback, array) => callback(array);
+let reversed = (calback, array) => calback(array);
