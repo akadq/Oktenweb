@@ -86,7 +86,7 @@ arrayMain = [6, 0, 8, 13, 0, 17, 20, 0, 98];
 function zerosToEnd(arr) {
     let newArr = [];
     let zerosCount = 0;
-    //filling new array with non zero values
+    //filling new array with non-zero values and counting zeros to add furher
     for (const arrElement of arr) {
         if (arrElement !== 0) {
             newArr.push(arrElement);
