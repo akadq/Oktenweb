@@ -82,22 +82,23 @@
 // console.log(firstCharUp(str));
 
 
-//Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@), наявність равлика, крапку яка знаходиться не меньше ніж на 2 символ далі після равлика, функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення) Протестувати на значеннях someemail@gmail.com someeMAIL@gmail.com someeMAIL@i.ua some.email@gmail.com
+// Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@), наявність равлика, крапку яка знаходиться не меньше ніж на 2 символ далі після равлика, функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення) Протестувати на значеннях someemail@gmail.com someeMAIL@gmail.com someeMAIL@i.ua some.email@gmail.com
 // function eValidation(mails) {
 //     let mail = '';
 //     let message = [];
 //     for (const current of mails) {
 //         mail = current.toLowerCase();
+// //          чи включає в себе @     чи є дані до знака @                                                     чи є '.' на відстані двох символів від @
 //         if (mail.includes('@') && mail.slice(0, mail.indexOf('@')).length > 0 && mail.slice(mail.indexOf('@')).indexOf('.') - 2 > mail.slice(mail.indexOf('@')).indexOf('@')) {
 //             message.push(mail.concat(' is valid'));
 //         } else {
-//             message.push(mail.concat(' is not valid'));
+//             message.push(mail.concat(' is NOT valid'));
 //         }
 //     }
 //     return message;
 // }
 //
-// let emails = ['someemail@gmail.com', 'someeMAIL@gmail.com', 'someeMAIL@i.ua', 'some.email@gmail.com'];
+// let emails = ['someemail@gmail.com', 'someeMAIL@gmail.com', 'someeMAIL@i.ua', 'some.email@gmail.com', '@gmail.com'];
 // eValidation(emails).forEach(val => console.log(val));
 
 
@@ -152,10 +153,10 @@
 
 
 //Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів. let str = "Сила тяжести приложена к центру масс тела"; document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
-function cutString(str, n) {
-    str = str.split(' ').filter((val, index) => index < n);
-    return str.join(' ');
-}
-
-let str = "Сила тяжести приложена к центру масс тела";
-document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру';
+// function cutString(str, n) {
+//     str = str.split(' ').filter((val, index) => index < n);
+//     return str.join(' ');
+// }
+//
+// let str = "Сила тяжести приложена к центру масс тела";
+// document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру';
