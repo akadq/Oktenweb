@@ -1,99 +1,85 @@
-//створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-// function minNumber(...threeNumbers) {
-//     let result = threeNumbers[0];
-//     for (const threeNumber of threeNumbers) {
-//         if (threeNumber < result) {
-//             result = threeNumber;
-//         }
+// Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов. document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+// function cutString(str, n) {
+//     // debugger;
+//     let newStr = [];
+//     for (let i = 0; i <= str.length; i += n) {
+//         newStr += str.substring(i, i + n) + ',';
 //     }
-//     return result;
+//     return newStr.slice(0, -1);
 // }
 //
-// console.log(minNumber(5, 2, 7));
+// document.writeln(cutString('наслаждение', 3))
 
-//створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-// function maxNumber(...threeNumbers) {
-//     let result = threeNumbers[0];
-//     for (const threeNumber of threeNumbers) {
-//         if (threeNumber > result) {
-//             result = threeNumber;
+
+//Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів. let str = 'Каждый охотник желает знать'; document.writeln(delete_characters(str, 7)); // Каждый
+// let str = 'Каждый охотник желает знать';
+//
+// function delete_characters(str, n) {
+//     if (str) {
+//         for (const strElement of str.split(" ")) {
+//             if (strElement.length === n) {
+//                 return strElement;
+//             }
 //         }
-//     }
-//     return result;
-// }
-// console.log(maxNumber(5, 2, 7));
-
-// створити функцію яка повертає найбільше число з масиву
-// const arrayMain = [6, 8, 13]
-// function maxArray(array) {
-//     let result = array[0];
-//     for (const currentArray of array) {
-//         if (currentArray > result) {
-//             result = currentArray;
-//         }
-//     }
-//     return result;
-// }
-// console.log(maxArray(arrayMain));
-
-// створити функцію яка повертає найменьше число з масиву
-// const arrayMain = [6, 8, 13]
-// function maxArray(array) {
-//     let result = array[0];
-//     for (const currentArray of array) {
-//         if (currentArray < result) {
-//             result = currentArray;
-//         }
-//     }
-//     return result;
-// }
-// console.log(maxArray(arrayMain));
-
-// Дано натуральное число n. Выведите все числа от 1 до n.
-// const natural = 9;
-// function naturalF(digit) {
-//     for (let i = 1; i <= digit; i++) {
-//         console.log(i);
 //     }
 // }
 //
-// naturalF(natural)
+// document.writeln(delete_characters(str, 6));
 
-// функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1" EXAMPLE: foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ] foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ] foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-// arrayMain = [6, 8, 13, 17];
-// function swichArr(arr, index) {
-//     let temp = 0;
-//     let p = 0;
-//     for (const i in arr) {
-//         if (i == index && index < arr.length - 1) {
-//             p = Number(i);
-//             temp = arr[p]
-//             arr[p] = arr[p + 1];
-//             arr[p + 1] = temp;
-//         }
+
+//Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр. let str = "HTML JavaScript PHP"; document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
+// let str = "HTML JavaScript PHP";
+//
+// function insert_dash(str) {
+//     return str.replaceAll(" ", "-").toUpperCase();
+// }
+//
+// document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
+
+
+// Дано список імен. let n1 = 'Harry..Potter' let n2 = 'Ron---Whisley' let n3 = 'Hermione__Granger' Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд let n1 = 'Harry Potter' let n2 = 'Ron Whisley' let n3 = 'Hermione Granger'
+// let n1 = 'Harry..Potter';
+// let n2 = 'Ron---Whisley';
+// let n3 = 'Hermione__Granger';
+//
+// function validation(str) {
+//     return str.replaceAll('.', ' ').replaceAll('-', ' ').replaceAll('_', ' ').split(/[\s,\t,\n]+/).join(' ');
+// }
+//
+// console.log(validation(n1), validation(n2), validation(n3));
+
+// створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+// function randArr() {
+//     arr = []
+//     for (let i = 0; i < 100; i++) {
+//         arr.push(Math.round(Math.random() * 100));
 //     }
 //     return arr;
 // }
-// console.log(swichArr(arrayMain, 2));
 
-// Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень. Двожина масиву від 2 до 100 EXAMPLE: [1,0,6,0,3] => [1,6,3,0,0] [0,1,2,3,4] => [1,2,3,4,0] [0,0,1,0] => [1,0,0,0]
-arrayMain = [6, 0, 8, 13, 0, 17, 20, 0, 98];
+// console.log(randArr());
 
-function zerosToEnd(arr) {
-    let newArr = [];
-    let zerosCount = 0;
-    //filling new array with non-zero values and counting zeros to add further
-    for (const arrElement of arr) {
-        if (arrElement !== 0) {
-            newArr.push(arrElement);
-        } else {
-            zerosCount++;
-        }
-    }
-    // adding zeros to the ant of array
-    for (let i = 0; i < zerosCount; i++) {
-        newArr.push(0);
-    }
-    return newArr;
-}
-console.log(zerosToEnd(arrayMain));
+//створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+// console.log(randArr().sort((a, b) => a - b));
+
+//створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати його за допомоги filter, залишивши тільки парні числа (без 0!)
+// console.log(randArr().filter(val => val % 2));
+
+
+//Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+// let str = 'Каждый охотник желает знать';
+//
+// function firstCharUp(str) {
+//     let newStr = "";
+//     if (str) {
+//         for (const strElement of str.split(" ")) {
+//             newStr = newStr.concat(strElement[0].toUpperCase()).concat(strElement.slice(1)).concat(' ');
+//         }
+//     }
+//     return newStr.slice(0, -1);
+// }
+//
+// console.log(firstCharUp(str));
+
+//Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@), наявність равлика, крапку яка знаходиться не меньше ніж на 2 символ далі після равлика, функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення) Протестувати на значеннях someemail@gmail.com someeMAIL@gmail.com someeMAIL@i.ua some.email@gmail.com
+
