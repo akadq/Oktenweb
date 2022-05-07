@@ -129,3 +129,35 @@ let users = [
 // }
 //
 // console.log(filterArray(users, (item) => item.status === false));
+
+// let targets = document.getElementsByTagName('div');
+// for (const target of targets) {
+//     target.innerText = "Memorize";
+//     target.style.background = "silver";
+//     target.style.margin = "3px"
+// }
+//
+// console.log(targets);
+
+// let wrap1List = document.getElementsByClassName('wrap1');
+// let wrap2List = document.getElementsByClassName('wrap2');
+// let wrap1 = wrap1List[0];
+// wrap1.style.border = '1px solid red';
+// let wrap1DivElements = wrap1.getElementsByTagName('div');
+// wrap1DivElements[0].style.border = '1px solid red';
+// let wrap2 = wrap2List[0];
+// console.log(wrap1.children);
+// console.log(wrap2);
+//
+// let allDivs = document.querySelectorAll('p');
+//
+// console.log(allDivs);
+
+const $ = document.querySelector.bind(document)
+const BACKGROUND_COLOR = 'rgba(200, 200, 242, 1)'
+
+function onClick() {
+    $('body').style.background = BACKGROUND_COLOR
+}
+
+$('button').addEventListener('click', onClick)
