@@ -153,11 +153,28 @@ let users = [
 //
 // console.log(allDivs);
 
-const $ = document.querySelector.bind(document)
-const BACKGROUND_COLOR = 'rgba(200, 200, 242, 1)'
+// const $ = document.querySelector.bind(document)
+// const BACKGROUND_COLOR = 'rgba(200, 200, 242, 1)'
+//
+// function onClick() {
+//     $('body').style.background = BACKGROUND_COLOR
+// }
+//
+// $('button').addEventListener('click', onClick)
 
-function onClick() {
-    $('body').style.background = BACKGROUND_COLOR
-}
+let numbers = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100];
 
-$('button').addEventListener('click', onClick)
+// let net = numbers.reduce((prev, val, index, arr) => {
+//     debugger;
+//     if (val > 50) {
+//         console.log(true)
+//     } else if (val < 50) {
+//         console.log(false);
+//     }
+//     return accum;
+// })
+//
+// console.log(net);
+// debugger;
+// let net = numbers.map((val, index, array) => val);
+
