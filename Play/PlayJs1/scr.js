@@ -49,4 +49,5 @@ function bgChange() {
     return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
 }
 const container = document.querySelector('#container');
-container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
+container.addEventListener('click', event => {event.target.style.backgroundColor = bgChange();
+    console.log(event.target)});
