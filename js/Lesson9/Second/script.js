@@ -147,6 +147,5 @@ for (const i in coursesArray) {
         const ps = document.createElement('p')
         ps.innerText = Object.values(coursesArray[i].modules)[mod];
         module.append(ps);
-        // console.log(moduleElement);
     }
 }
