@@ -70,5 +70,5 @@ document.body.getElementsByClassName('content_1')[0].innerText = 'dovilny text';
 const text2 = document.body.getElementsByClassName('text2')
 
 for (const taxt2Element of text2) {
-    taxt2Element.innerText = 'March2022';
+    taxt2Element.innerText = 'March2023';
 }
