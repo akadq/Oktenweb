@@ -146,7 +146,13 @@ class Boat extends Car {
 let merc = new Car('s-class', 2022);
 let marine = new Boat('Big');
 marine.model = 'Suzi'
-marine.#color = 'red';
+marine.color = 'red';
 
 console.log(merc);
 console.log(marine);
+
+const l = 5;
+const b = 5;
+
+const fn = () => {merc.model + ' ' + marine.size};
+btn.textContent = 'done';
