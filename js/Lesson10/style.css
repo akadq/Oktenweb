@@ -28,12 +28,17 @@ body {
     background: linear-gradient(135deg, rgba(213, 215, 215, 1) 0%, rgba(9, 60, 121, 1) 46%, rgba(0, 185, 255, 1) 100%);
     border-radius: 5px;
     box-shadow: 0 0 5px burlywood;
+    transition: all 1s ease;
 }
 
 .cell:after {
     position: absolute;
     content: url('smiley-with-tongue-in-a-square-shape-svgrepo-com.svg');
     opacity: 0.15;
+}
+
+.cell:hover {
+    transform: scale(1.1);
 }
 
 .container {
