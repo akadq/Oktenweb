@@ -7,6 +7,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         result.forEach(val => {
             i++;
             let row;
+            // Creating row for 5 posts, each fifth row will be with new id like row0, row5, row10... in each row 5 posts will be placed
             if ((i === 0) || (i % 5 === 0)) {
                 className = i;
                 row = document.createElement('div');
@@ -26,6 +27,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 row.append(posts);
                 container.append(row);
             } else {
+                // four (4) more post adding to row with id name row + clasName
                 const posts = document.createElement('div');
                 const userId = document.createElement('h5');
                 const id = document.createElement('h6');
