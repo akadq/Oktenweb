@@ -1,7 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <App />
+);
 
 // function Clock(props) {
 //     return (
@@ -169,18 +173,26 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //
 // root.render(<LoginControl/>);
 
-function Example() {
-    // Declare a new state variable, which we'll call "count"
-    const [count, setCount] = useState(0);
 
-    return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-            </button>
-        </div>
-    );
-}
+// function Example() {
+//     // Declare a new state variable, which we'll call "count"
+//     const [count, setCount] = useState(0);
+//
+//     return (
+//         <div>
+//             <p>You clicked {count} times</p>
+//             <button onClick={() => setCount(count + 1)}>
+//                 Click me
+//             </button>
+//         </div>
+//     );
+// }
+//
+// root.render(<Example/>)
 
-root.render(<Example/>)
+// function getSome() {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//         .then((response) => response.json())
+//         .then((json) => console.log(json));
+// }
+// getSome();

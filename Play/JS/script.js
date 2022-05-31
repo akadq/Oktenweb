@@ -1,3 +1,41 @@
+// const h1 = document.createElement('h1');
+// const times = new Date().toLocaleTimeString();
+//
+// function refresh() {
+//     h1.innerText = new Date().toLocaleTimeString();
+//     if (h1.innerText.includes('0', 7) ? h1.style.color = 'red' : h1.style.color = 'blue');
+//     document.body.append(h1);
+// }
+//
+// setInterval(() => {
+//     refresh()
+// }, '1000');
+
+// function yes() {
+//     const container = document.createElement('div');
+//     const ul = document.createElement('ul');
+//     container.id = 'container';
+//
+//     document.body.append(container);
+//     container.append(ul);
+//
+//
+//     fetch('https://jsonplaceholder.typicode.com/todos')
+//         .then(value => value.json())
+//         .then(responce => {
+//             responce.forEach(element => {
+//                 const li = document.createElement('li');
+//                 li.append(element.title);
+//                 ul.append(li);
+//                 if (element.completed === true) {
+//                     li.classList.add('completed');
+//                 } else {
+//                     li.classList.add('uncompleted');
+//                 }
+//             });
+//         });
+// }
+
 // const arr = [
 //     {
 //         one: 1,
@@ -35,46 +73,6 @@
 //     }
 // );
 // console.log(newNumb);
-
-let users = [
-    {
-        name: "Petya",
-        age: 21,
-        status: true
-    },
-    {
-        name: "Vasya",
-        age: 25,
-        status: false
-    },
-    {
-        name: "Olya",
-        age: 18,
-        status: false
-    },
-    {
-        name: "Vika",
-        age: 32,
-        status: true
-    },
-    {
-        name: "Taras",
-        age: 42,
-        status: false
-    },
-    {
-        name: "Max",
-        age: 35,
-        status: true
-    },
-    {
-        name: "Ostap",
-        age: 55,
-        status: true,
-        getFullName: function funcs() {
-            console.log(this);
-        }
-    }];
 
 // function User(spec) {
 //     this.userName = "Dima";
@@ -177,4 +175,74 @@ let numbers = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100];
 // console.log(net);
 // debugger;
 // let net = numbers.map((val, index, array) => val);
+
+let users = [
+    {
+        name: "Petya",
+        age: 21,
+        status: true,
+        skills: {
+            direction: "front",
+            sallary: 'good'
+        }
+    },
+    {
+        name: "Vasya",
+        age: 25,
+        status: false
+    },
+    {
+        name: "Olya",
+        age: 18,
+        status: false
+    },
+    {
+        name: "Vika",
+        age: 32,
+        status: true
+    },
+    {
+        name: "Taras",
+        age: 42,
+        status: false
+    },
+    {
+        name: "Max",
+        age: 35,
+        status: true
+    },
+    {
+        name: "Ostap",
+        age: 55,
+        status: true,
+    }];
+
+// ===27.05===
+// localStorage.clear()
+// JSON.stringify()
+// JSON.parse()
+// navigator.geolocation.getCurrentPosition(position => console.log(position));
+
+// let jbi = {};
+//
+// localStorage.setItem('ysesr',JSON.stringify(users));
+// let obj = localStorage.getItem('ysesr');
+// let pasrs = JSON.parse(obj);
+// pasrs.push({'one': 'two'})
+// console.log(pasrs);
+
+// ---
+// cookie
+// if (navigator.cookieEnabled === false) {
+//     alert('cookies disabled');
+// }
+
+// let {name, age, status} = users[0];
+// console.log(name)
+
+// let user2 = JSON.stringify(users);
+// user2[0].name = 'Vasa';
+// // user2[0].name = 'Vasa';
+// console.log(users, user2);
+// // console.log(user2[0].skills === users[0].skills);
 

@@ -10,12 +10,13 @@ function App() {
         {id: 2, title: 'JavaScript 2', body: 'Description'},
         {id: 3, title: 'JavaScript 3', body: 'Description'}
     ])
+
     return (
         <div className="App">
             <form>
                 <MyInput type="text" placeholder="Name of the post"/>
                 <MyInput type="text" placeholder="Description"/>
-                <MyButton >Create new post</MyButton>
+                <MyButton>Create new post</MyButton>
             </form>
             <PostList posts={posts} title="Posts list first"/>
         </div>
