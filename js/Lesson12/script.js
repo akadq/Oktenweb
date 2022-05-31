@@ -16,9 +16,9 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 row.className = 'row';
                 const posts = document.createElement('div');
                 const userId = document.createElement('h5');
-                const id = document.createElement('h6');
-                const title = document.createElement('h6');
-                const body = document.createElement('h7');
+                const id = document.createElement('h5');
+                const title = document.createElement('h5');
+                const body = document.createElement('h5');
                 userId.innerText = `UserID: ${val.userId}`;
                 id.innerText = `ID: ${val.id}`;
                 title.innerText = `Title: ${val.title}`;
