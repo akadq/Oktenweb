@@ -26,6 +26,7 @@ function output(details) {
     const content = document.getElementById('content');
     const btn = document.createElement('button');
     btn.innerHTML = 'post of current user';
+    btn.id = 'mainBtn';
     details.forEach(detail => {
         const item = document.createElement('h4');
         item.innerHTML = `${detail[0]}: ${detail[1]}`;
@@ -38,18 +39,21 @@ function output(details) {
             .then(value => {
                 // console.log(value.length);
                 const wrapPosts = document.createElement('div')
+                wrapPosts.id = 'wrapPosts';
                 for (let i = 0; i <= value.length - 1; i++) {
                     const item = document.createElement('p');
                     item.className = 'posts';
                     // item.style.display = 'inline-block';
                     const btn2 = document.createElement('button');
                     btn2.innerHTML = 'Post details';
-                    item.innerHTML = `<br>Title ${i + 1}: ${value[i].title}`;
+                    btn2.className = 'postBtn';
+                    item.innerHTML = `Title ${i + 1}: ${value[i].title}`;
                     btn2.onclick = (ev => {
                         localStorage.setItem('postId', value[i].id)
                         window.open('post-details.html', '_parent');
                     })
-                    wrapPosts.append(item, btn2);
+                    item.append(btn2);
+                    wrapPosts.append(item);
                     content.append(wrapPosts);
                 }
             });

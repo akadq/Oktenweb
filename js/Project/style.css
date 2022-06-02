@@ -8,6 +8,7 @@ body {
     color: darkblue;
     font-size: 1.2em;
     box-sizing: border-box;
+    background: lightgoldenrodyellow;
 }
 #content {
     display: flex;
@@ -20,8 +21,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid lightblue;
     width: 49%;
+    background: lightblue;
+    border: 1px solid gray;
+    margin: 0.3%;
 }
 
 .btn {

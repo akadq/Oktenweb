@@ -6,6 +6,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
         const content = document.getElementById('content');
         value.forEach(val => {
             const item = document.createElement('div');
+            item.className = 'item';
             item.innerHTML =
                 `<p>PostID: </p> ${val.postId}
                 <p>ID: </p> ${val.id}
