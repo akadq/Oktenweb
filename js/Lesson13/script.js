@@ -6,7 +6,7 @@ function wakeUp(timeNow) {
             } else {
                 reject("Still lying on the bed");
             }
-        }, 1000)
+        }, 1200)
     });
 }
 

@@ -1,0 +1,275 @@
+# show databases;
+# use allien7;
+# show tables;
+#
+# create table users
+# (
+#     id     int         not null primary key auto_increment,
+#     name   varchar(30) not null,
+#     age    int         not null,
+#     gender varchar(6)  not null
+# );
+#
+# show tables;
+#
+# insert into users
+# values (null, 'Max', 16, 'male');
+#
+# select *
+# from users;
+#
+# select *
+# from users
+# where name like '%o%';
+#
+# select *
+# from users
+# where name like '%e%';
+#
+# select *
+# from users
+# where age >= 20
+#   and age <= 30;
+#
+# select *
+# from users
+# where age between 20 and 40
+#    or name = 'max';
+#
+# select *
+# from cars
+# where year >= 2000;
+# select *
+# from cars
+# where year <= 2015;
+# select *
+# from cars
+# where year = 2008
+#    or year = 2009
+#    or year = 2010;
+# select *
+# from cars
+# where year != 2008
+#    or year != 2009
+#    or year != 2010;
+#
+# select *
+# from cars
+# where year = price
+#    or year = price
+#    or year = price;
+#
+# select *
+# from cars
+# where model = 'bmw'
+#   and year > 2014;
+#
+# select *
+# from cars
+# where model = 'audi'
+#   and year < 2014;
+#
+# select * from cars limit 5;
+# select * from cars order by id desc limit 5;
+#
+# select * from cars where model = 'kia';
+# select avg(price) as 'averege' from cars
+# where model = 'kia';
+#
+# select avg(price) as 'averege' from cars;
+#
+# select count(*) as count from cars group by model;
+# select count(*) as count, model from cars group by model order by count desc limit 1;
+# select * from cars where model like '_a%a_';
+# select avg(price) from cars;
+# select * from cars where model like '_______%';
+#
+# select * from cars where price > (select avg(price) from cars);
+#
+# select distinct name from users;
+#
+# select max(age) from users
+#                            union
+#                            select min(age) from users;
+
+# create table users
+# (
+#     id       int primary key auto_increment,
+#     username varchar(256) not null,
+#     password varchar(256) not null,
+#     profile_id int not null unique ,
+#     foreign key (profile_id) references profile(id)
+# );
+#
+# create table profile
+# (
+#     id   int primary key auto_increment,
+#     name varchar(100) not null,
+#     surname varchar(100)not null ,
+#     age int not null default 18
+# );
+#
+#
+# select * from users join profile on profile.id = users.profile_id;
+
+select FirstName
+from client
+where LENGTH(FirstName) < 6;
+
+select DepartmentCity, idDepartment
+from department
+where DepartmentCity = 'Lviv';
+
+select Education, FirstName, LastName
+from client
+where Education = 'high'
+order by LastName;
+
+select *
+from application
+order by idApplication desc
+limit 5;
+
+select *
+from client
+where LastName like '%ov'
+   or LastName like '%ova';
+
+select *
+from client
+where City = 'Kyiv';
+
+select distinct FirstName
+from client;
+
+select FirstName, LastName, Sum
+from client c
+         join application a on c.idClient = a.Client_idClient
+where Sum > 5000
+  and Currency = 'Gryvnia';
+
+select FirstName, LastName, DepartmentCity
+from client c
+         join department d on c.Department_idDepartment = d.idDepartment
+where DepartmentCity = 'Lviv';
+
+select distinct distinct max(Sum), FirstName, LastName
+from client c
+         join application a on c.idClient = a.Client_idClient;
+
+select LastName, FirstName, Sum
+from client c
+         join application a on c.idClient = a.Client_idClient;
+
+select max(distinct Sum)
+from application;
+
+select FirstName name, max(Sum) max_credit
+from client c
+         join application a on a.Client_idClient = c.idClient
+group by FirstName;
+
+select length(CreditState), CreditState
+from application
+group by CreditState;
+
+select max(Sum)
+from application
+union
+select min(Sum)
+from application;
+
+select *
+from client c
+         join application a on c.idClient = a.Client_idClient
+where Education = 'high';
+
+select FirstName name, count(idApplication) applic
+from client c
+         join application a on a.Client_idClient = c.idClient
+group by FirstName;
+
+select FirstName name, count(idApplication) applic
+from client c
+         join application a on a.Client_idClient = c.idClient
+where Education = 'high'
+group by FirstName;
+
+select FirstName name, avg(Sum) avg_credit
+from client c
+         join application a on a.Client_idClient = c.idClient
+group by FirstName
+order by avg_credit desc
+limit 1;
+
+select DepartmentCity, Sum(Sum) suma
+from application a
+         join client c on c.idClient = a.Client_idClient
+         join department d on c.Department_idDepartment = d.idDepartment group by DepartmentCity order by suma desc limit 1;
+
+select DepartmentCity, max(Sum) suma from application
+    join client c on c.idClient = application.Client_idClient
+    join department d on d.idDepartment = c.Department_idDepartment group by DepartmentCity order by suma desc limit 1;
+
+select LastName, Sum, Currency from client
+    join application a on client.idClient = a.Client_idClient;
+
+update client set FirstName='Test' where Education='high';
+
+update client c join application on application.Client_idClient = c.idClient
+set sum=5000, Currency='Gryvnia' where Education='high';
+
+update client join department d on d.idDepartment = client.Department_idDepartment set City='Lviv' where City='Kyiv';
+
+delete
+from application
+where CreditState = 'Returned';
+
+delete application from application inner join client c on application.Client_idClient = c.idClient where LastName like '_e%' or LastName like '_o%';
+
+select idDepartment, DepartmentCity, Sum suma from client
+        join department d on d.idDepartment = client.Department_idDepartment
+        join application a on client.idClient = a.Client_idClient where DepartmentCity='Lviv' and Sum > 5000;
+
+select LastName, Sum
+from client
+         join application a on client.idClient = a.Client_idClient
+where Sum > 5000
+  and CreditState = 'Returned';
+
+select max(Sum), CreditState
+from application where CreditState='Not returned';
+
+select LastName, min(Sum) suma from client join application a on client.idClient = a.Client_idClient group by LastName order by suma limit 1;
+
+select * from application where Sum > (select avg(Sum) from application);
+
+select LastName, City from client join application a on client.idClient = a.Client_idClient
+                      where City=(select City from client join application a on client.idClient = a.Client_idClient where Sum=(select max(Sum) from application));
+select City from client join application a on client.idClient = a.Client_idClient where Sum=(select max(Sum) from application);
+
+select City from client join application a on client.idClient = a.Client_idClient
+            where LastName=(select LastName from (select count(*) as suma, LastName from client join application a on client.idClient = a.Client_idClient group by LastName order by suma desc limit 1) as LastName) group by City;
+select count(*) as suma, LastName from client join application a on client.idClient = a.Client_idClient group by LastName order by suma desc limit 1;
+
+select LastName from (select count(*) as suma,
+                             LastName from client join application a on client.idClient = a.Client_idClient group by LastName order by suma desc limit 1) as LastName;
+
+# select(select count(*) as suma from client join application a on client.idClient = a.Client_idClient group by LastName order by suma desc limit 1) as one;
+
+# select * from (select count(*) as suma, LastName from client join application a on client.idClient = a.Client_idClient group by LastName order by suma desc limit 1) as query drop column suma;
+
+select avg(Age) from (select * from client) as alli;
+
+select age from client union select City from client;
+
+create table manufacturer
+(
+    id    int primary key auto_increment,
+    country varchar(100) not null ,
+    name varchar(100),
+    id_manufacturer int not null unique,
+    foreign key (id_manufacturer) references pro
+);
+
+
