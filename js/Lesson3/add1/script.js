@@ -37,7 +37,7 @@
 
 let arr1 = [5, 7, 9, 17, 18, "one", "two", "three", "four", "five", "true", "false"];
 let arr2 = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-
+//
 // let arrEmpty = [];
 // arrEmpty[0] = 5;
 // arrEmpty[1] = "some";
@@ -59,8 +59,19 @@ let arr2 = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 //     console.log(arrElement);
 // }
 
-for (let i = arr2.length - 1; i >= 0; i--) {
-    const arr2Element = arr2[i];
-    console.log(arr2Element);
+// for (let i = arr2.length - 1; i >= 0; i--) {
+//     const arr2Element = arr2[i];
+//     console.log(arr2Element);
+//
+// }
 
-}
+console.log(arr2.length);
+
+// let i = 0;
+// while (i < arr2.length) {
+//     if (arr2[i] % 3 === 0) {
+//         arr2[i] = 'okten';
+//         }
+//     console.log(arr2[i]);
+//     i++;
+// }
