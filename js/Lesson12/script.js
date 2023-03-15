@@ -18,6 +18,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 row.className = 'row';
                 // creating rows for five items
 
+
                 const posts = document.createElement('div');
                 const userId = document.createElement('h5');
                 const id = document.createElement('h5');
