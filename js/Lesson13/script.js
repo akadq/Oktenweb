@@ -49,16 +49,16 @@ function oktenScjool(isLearn) {
 
 async function myDay() {
     try {
-        const wake = await wakeUp("Waked");
+        const wake = await wakeUp(true);
         console.log(`Yes, i am`, wake);
 
-        const meal = await breakfest(true);
+        const meal = await breakfest(false);
         console.log(meal);
 
         const workout = await sport(true);
         console.log(workout);
 
-        const study = await oktenScjool(false);
+        const study = await oktenScjool(true);
         console.log(study);
     } catch (e) {
         console.warn(e);
