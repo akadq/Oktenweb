@@ -1,3 +1,0 @@
-master line 1
-master line 2 - modified
-master line 3
