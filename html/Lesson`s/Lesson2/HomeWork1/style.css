@@ -3,6 +3,7 @@ body {
     margin: 20px;
     flex-direction: column;
     font-weight: 100;
+    padding: 5%;
 }
 
 .widgets, .contact {
