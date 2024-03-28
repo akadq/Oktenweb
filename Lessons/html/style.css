@@ -1,0 +1,11 @@
+h3 {
+    color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: revert;
+}
+
+ol>li:first-letter {
+    color: red;
+}
